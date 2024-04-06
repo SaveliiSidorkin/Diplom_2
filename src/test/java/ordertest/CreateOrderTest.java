@@ -67,7 +67,7 @@ public class CreateOrderTest {
         orderClient.getIngredientsIds();
         ArrayList<String> idForOrder = new ArrayList<>();
         order = new Order(idForOrder);
-        ValidatableResponse createOrderResponse = orderClient.createOrder(order, accessToken).log().all();
+        ValidatableResponse createOrderResponse = orderClient.createOrder(order, accessToken);
         createOrderResponse
                 .statusCode(SC_BAD_REQUEST)
                 .body("success", equalTo(false))
