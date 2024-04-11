@@ -35,7 +35,7 @@ public class UserClient extends BaseApiClient {
                 .header("authorization", accessToken)
                 .body(user)
                 .when()
-                .patch(Url.UPDATE_USER)
+                .patch(Url.USER)
                 .then();
     }
 
@@ -45,7 +45,7 @@ public class UserClient extends BaseApiClient {
                 .spec(getSpec())
                 .header("authorization", accessToken)
                 .when()
-                .delete(Url.UPDATE_USER)
+                .delete(Url.USER)
                 .then();
     }
 }
